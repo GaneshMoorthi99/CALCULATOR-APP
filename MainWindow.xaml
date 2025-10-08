@@ -1,0 +1,55 @@
+﻿<Window x:Class="calculatorapp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculatorapp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="270">
+    <StackPanel Background="Black">
+       
+        <TextBox x:Name="txtresult" Height="100" BorderThickness="0" Background="Transparent" Foreground="White" TextAlignment="Right" FontSize="50"></TextBox>
+        <StackPanel>
+            
+            <!--Button D,AC,%,/-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="D" x:Name="delete" Background="#D4D4D2"></Button>
+                <Button Content="AC" x:Name="clear" Click="clear_Click" Background="#D4D4D2"></Button>
+                <Button Content="%" Background="#D4D4D2"></Button>
+                <Button Content="/" x:Name="div" Click="btnoper_Click" Background="#FF9500"></Button>
+            </StackPanel>
+            
+            <!--Button 7,8,9,*-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="7" x:Name="btn" Click="btn_Click"></Button>
+                <Button Content="8" Click="btn_Click"></Button>
+                <Button Content="9" Click="btn_Click"></Button>
+                <Button Content="*" x:Name="multi" Click="btnoper_Click" Background="#FF9500"></Button>
+            </StackPanel>
+            
+            <!--Button 4,5,6-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="4" Click="btn_Click"></Button>
+                <Button Content="5" Click="btn_Click"></Button>
+                <Button Content="6" Click="btn_Click"></Button>
+                <Button Content="-" x:Name="sub" Click="btnoper_Click" Background="#FF9500"></Button>
+            </StackPanel>
+            
+            <!--Button 1,2,3,+-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="1" Click="btn_Click"></Button>
+                <Button Content="2" Click="btn_Click"></Button>
+                <Button Content="3" Click="btn_Click"></Button>
+                <Button Content="+" x:Name="add" Click="btnoper_Click" Background="#FF9500"></Button>
+            </StackPanel>
+            
+            <!--Button +/-,0,.,=-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="+/-"></Button>
+                <Button Content="0" Click="btn_Click"></Button>
+                <Button Content="."></Button>
+                <Button Content="=" x:Name="submit" Click="submit_Click" Background="#FF9500"></Button>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
